@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: rgb(211, 211, 255);
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            min-height: 100vh;
+            font-size: 40px; 
+        }
+           h1{
+              color: rgb(211, 211, 255);
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        p{
+             align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 70px; 
+            margin: 20px;
+            color: rgb(211, 211, 255);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        button{
+              color: rgb(211, 211, 255);
+            font-size: 25px;
+            border-radius: 20px;
+            background-color: rgb(39, 39, 163);
+        }
+        section{
+         text-align: center;
+         background-color: rgb(32, 32, 165);
+         padding: 20px;
+         border-radius: 20px;
+        }
+     
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Contador</h1>
+        <p>0</p>
+        <button onclick="aumentar()">Mais</button>
+        <button onclick="diminuir()">Menos</button>
+    </section>
+    <script>
+        let numero = 0
+        function aumentar(){
+            numero = numero +1
+            render()
+        }
+         function diminuir(){
+            numero = numero -1
+            render()
+        }
+         function render(){
+           const p = document.querySelector("p")
+           p.innerText = numero  
+        }
+        render()
+    </script>
+</body>
+</html>
